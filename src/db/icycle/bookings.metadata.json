@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"icycle.bookings"}],"uuid":"56d8d0e430184b49aedb118557f98668"}
