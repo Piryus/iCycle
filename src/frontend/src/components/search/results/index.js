@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import {Link} from "react-router-dom";
 import Map from "../../utils/map";
 import Axios from "axios";
+import config from "../../../config";
 
 const styles = theme => ({
     root: {
@@ -57,7 +58,7 @@ class SearchResults extends React.Component {
         const {classes} = this.props;
         return (
             <>
-                <Map googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyB0okxLztMwm-VYp8sRJtQNsGUVvmEfgrs"
+                <Map googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${config.GOOGLE_MAP_API_KEY}`}
                      loadingElement={<div style={{height: `100%`}}/>}
                      containerElement={<div className={classes.root}/>}
                      mapElement={<div style={{height: `100%`}}/>}

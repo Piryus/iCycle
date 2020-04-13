@@ -10,6 +10,7 @@ import SlotPicker from "../../utils/slot-picker";
 import {Link} from "react-router-dom";
 import moment from "moment";
 import Map from "../../utils/map";
+import config from "../../../config";
 
 const styles = theme => ({
     storageImage: {
@@ -224,7 +225,7 @@ class Storage extends React.Component {
 
                             <Typography variant="h6">Location</Typography>
                             <Map
-                                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyB0okxLztMwm-VYp8sRJtQNsGUVvmEfgrs"
+                                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${config.GOOGLE_MAP_API_KEY}`}
                                 loadingElement={<div style={{height: `100%`}}/>}
                                 containerElement={<div style={{height: `150px`}}/>}
                                 mapElement={<div style={{height: `100%`}}/>}
